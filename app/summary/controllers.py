@@ -9,8 +9,8 @@ module = Blueprint('summary', __name__, url_prefix='/summary')
 
 @module.route('/random/', methods=['GET'])
 def box_endpoint():
-    retelling_all = Retelling.query.all()
-    random_id = random.randint(0, len(retelling_all)-1)
-    retelling = retelling_all[random_id]
+    retelling_ids = Retelling.query.with_entities(Retelling.id).all()
+    random_id = random.choice(retelling_ids)[0]
+    retelling = Retelling.query.filter(Retelling.id == random_id).first()
     result = {"id": retelling.id, "title": retelling.title, "text": retelling.text}
     return json.dumps(result)
