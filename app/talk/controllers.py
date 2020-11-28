@@ -1,8 +1,7 @@
 import json
-import base64
 
 from flask import Blueprint
-from .models import TalksType, Retelling
+from .models import TalksType
 
 
 module = Blueprint('talk', __name__, url_prefix='/talk')

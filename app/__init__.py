@@ -24,6 +24,8 @@ def create_app():
     # Setup Flask-Migrate
     migrate.init_app(app, db)
 
-    import app.talk.controllers as pets
-    app.register_blueprint(pets.module)
+    import app.talk.controllers as talk
+    app.register_blueprint(talk.module)
+    import app.summary.controllers as summary
+    app.register_blueprint(summary.module)
     return app
