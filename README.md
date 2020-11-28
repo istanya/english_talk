@@ -16,6 +16,10 @@ We assume that you have `git` and `virtualenv` and `virtualenvwrapper` installed
     cd ~/dev/english_talk
     workon my-virtualenv
     pip3.7 install -r requirements.txt
+    
+    # Create data directory 
+    # Download https://dropmefiles.com/fB7D7
+    # Unzip and locate to data directory 
 
 
 # Configuring SMTP
