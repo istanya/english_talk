@@ -26,6 +26,11 @@ def create_app():
 
     import app.talk.controllers as talk
     app.register_blueprint(talk.module)
+
     import app.summary.controllers as summary
     app.register_blueprint(summary.module)
+
+    import app.chat.controllers as chat
+    app.register_blueprint(chat.module)
+
     return app
