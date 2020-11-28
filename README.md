@@ -4,16 +4,16 @@
 
 We assume that you have `git` and `virtualenv` and `virtualenvwrapper` installed.
 
-    # Clone the code repository into ~/dev/health_project
+    # Clone the code repository into ~/dev/english_talk
     mkdir ~/dev
     cd ~/dev
-    git clone https://github.com/anuzhina/health_project.git health_project
+    git clone https://github.com/istanya/english_talk.git english_talk
 
     # Create the 'health_project' virtual environment
     mkvirtualenv my-virtualenv --python=python3.7
 
     # Install required Python packages
-    cd ~/dev/health_project
+    cd ~/dev/english_talk
     workon my-virtualenv
     pip3.7 install -r requirements.txt
 
