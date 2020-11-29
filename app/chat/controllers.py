@@ -21,7 +21,7 @@ def box_endpoint():
 
 @module.route('/answer/', methods=['POST'])
 def chat_answer():
-    user_answer = request.form.get('text')
+    user_answer = json.loads(request.data)['text']
 
     model_answer = get_answers(user_answer)
     result = {"text": model_answer}
