@@ -8,7 +8,7 @@ module = Blueprint('talk', __name__, url_prefix='/talk')
 
 
 @module.route('/talks_type/', methods=['GET'])
-def box_endpoint():
+def talk_endpoint():
     talks_type_all = TalksType.query.all()
     result = []
     for talk_type_obj in talks_type_all:
